@@ -1,0 +1,1 @@
+export const todoUrl = "http://localhost:2025/todos"
