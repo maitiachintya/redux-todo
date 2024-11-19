@@ -38,9 +38,14 @@ const EditItem = () => {
     // Handle form submission to update the item
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(updateItem({ id: parseInt(id), updatedData: { name, description } })).then(() =>
-            navigate("/todo-page") // Navigate back to the ToDo page after successful update
-        );
+        // dispatch(updateItem({ id: parseInt(id), updatedData: { name, description } })).then(() =>
+        //     navigate("/todo-page") // Navigate back to the ToDo page after successful update
+        // );
+        console.log("Res data:", name, description)
+        let formdata = {
+            id, name, description
+        }
+        dispatch(updateItem(formdata))
     };
 
     // Render a loading spinner if data is being fetched

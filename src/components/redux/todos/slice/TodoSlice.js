@@ -16,8 +16,8 @@ export const addItem = createAsyncThunk("items/addItem", async (newItem) => {
     return response.data;
 });
 
-export const updateItem = createAsyncThunk("items/updateItem", async ({ id, updatedData }) => {
-    const response = await axios.put(`${api_Url}/${id}`, updatedData);
+export const updateItem = createAsyncThunk("items/updateItem", async ( updatedData ) => {
+    const response = await axios.put(`${api_Url}/${updatedData.id}`, updatedData);
     console.log("Axios Response for UpdatedAoi", response);
     return response.data;
 })

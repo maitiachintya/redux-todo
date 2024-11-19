@@ -10,7 +10,10 @@ import EditItem from '../components/redux/todos/view/EditItem'
 const Routing = () => {
     return (
         <div>
-            <Router>
+            <Router future={{
+        v7_relativeSplatPath: true,
+        v7_startTransition: true,
+      }}>
                 <Header />
                 <Routes>
                     <Route path='' element={<Home />}></Route>
